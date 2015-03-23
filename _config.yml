@@ -1,5 +1,4 @@
 baseurl:/blog
-highlighter: rouge
 gems:
 - jekyll-mentions
 - jemoji
