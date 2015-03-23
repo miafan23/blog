@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="../css/main.css" type="text/css">
-<title>{ {page.title }}</title>
-</head>
-<body>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
-<div id="nav">
-	<ul>
-		<a href="#"><li>blog</li></a>
-		<a href="#"><li>project</li></a>
-		<a href="#"><li>contact</li></a>
-	</ul>
-</div>
+  {% include head.html %}
+
+  <body class="">
+
+    {% include sidebar.html %}
 
 
+    
 
-{{ content }}
-<div id="contact">
-<div id="icon">
-	<img src="../images/github.png" />
-	<img src="../images/mail.png" />
-	<img src="../images/doubanB.png" />
-</div>
-</div>
-</body>
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <div class="masthead-title">
+            <a href="/" title="Home"><span data-hover="HuS">{{ site.title }}</span></a>
+            <small>{{ site.tagline }}</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="container content">
+        {{ content }}
+      </div>
+    </div>
+    
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    {% include footer.html %}
+
+    <!-- "The ending isn’t any more important than the moments leading to it." -Dr. Eva Rosalene, To The Moon -->
+  </body>
 </html>
