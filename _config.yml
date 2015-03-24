@@ -8,12 +8,12 @@ encoding:         "utf-8"
 permalink:        pretty
 
 # Setup
-title:            HuS
+title:            fiona
 tagline:          'Time is limited, To be a better man'
 description:      'Hello,World! Here is my personal weblog about technology and life.'
-url:              http://fiona23.github.io/blog
+url:              http://fiona23.github.io/blog/
 author:
-  name:           'SooHu'
+  name:           'fiona'
   url:            https://github.com/fiona23
 
 paginate:         5
@@ -25,4 +25,4 @@ version:          1.0.0
 comments :
     provider : duoshuo
     duoshuo :
-      short_name : soohu
+      short_name : fiona
