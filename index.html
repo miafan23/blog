@@ -3,14 +3,28 @@ layout: default
 title: Home
 ---
 <div id="head">
-<img src="/public/img/head.jpeg" alt="" />
 <p>欢迎来到fiona的博客</p>
+<img src="/public/img/head.png" alt="" />
 </div>
 
-<div id="content">
+<div id="content" class="container">
+	<img class="index-img" src="/public/img/body1.png" />	
+	<img class="index-img" src="/public/img/body2.png" />
+	<img class="index-img" src="/public/img/body3.png" />
+
+        {% for post in site.posts %}
+	<div id="blog-list">
+        <p class="blog-title">
+        {{ post.date | date_to_string }} <a class="blog-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+       
+	</p>
+	
+	<p class="blog-content">
+	{{ post.excerpt }}
+	 </p>
+	</div>
+        {% endfor %}
 
 </div>
 
-<div id="footer">
 
-</div>

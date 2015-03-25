@@ -4,4 +4,24 @@ body{
 	margin:0;
 }
 
+.container{
+	width:960px;
+	margin: 0 auto;
+}
 
+a:link, a:visited, a:hover{
+	text-decoration:none;
+}
+
+/*index*/
+#content{
+	position:relative;
+}
+
+.index-img{
+	position:absolute;
+	z-index:-5;
+}
+
+
+/*index end*/
