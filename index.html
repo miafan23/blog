@@ -4,13 +4,13 @@ title: Home
 ---
 <div id="head">
 <p>欢迎来到fiona的博客</p>
-<img src="/public/img/head.png" alt="" />
+<img src="/blog/public/img/head.png" alt="" />
 </div>
 
 <div id="content" class="container">
-	<img class="index-img" src="/public/img/body1.png" />	
-	<img class="index-img" src="/public/img/body2.png" />
-	<img class="index-img" src="/public/img/body3.png" />
+	<img class="index-img" src="/blog/public/img/body1.png" />	
+	<img class="index-img" src="/blog/public/img/body2.png" />
+	<img class="index-img" src="/blog/public/img/body3.png" />
 
         {% for post in site.posts %}
 	<div id="blog-list">
@@ -23,7 +23,7 @@ title: Home
 	{{ post.excerpt }}
 	 </p>
 	</div>
-        {% endfor %}
+{% endfor %}
 
 </div>
 
