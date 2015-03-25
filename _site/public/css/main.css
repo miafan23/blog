@@ -2,6 +2,10 @@
 body{
 	padding:0;
 	margin:0;
+	font-size:14px;
+	font-family:华文细黑,'AvenirNextLTW01-Regular',微软雅黑;
+	font-weight:lighter;	
+	color:#464646;
 }
 
 .container{
@@ -13,7 +17,30 @@ a:link, a:visited, a:hover{
 	text-decoration:none;
 }
 
+hr{
+	width:80%;	
+	border:1px solid #cdcdcd;
+	margin:0 auto;
+
+
+}
 /*index*/
+#index-head{
+	position:relative;
+	height:400px;
+	
+}
+
+	#index-head img{
+		position:absolute;
+	}
+
+	#index-head #describe{
+		position:absolute;
+		width:150px;
+	 	padding-top:40px;	
+	}
+
 #index-content{
 	position:relative;
 }
@@ -25,10 +52,14 @@ a:link, a:visited, a:hover{
 
 .blog-block{
 	width:450px;
+	padding:50px 0 0 20px;
 	position:absolute;
 	z-index:1;
 }
 
+	.blog-block p{
+		line-height:27px;
+	}
 #index-content{
 	height:1200px;
 
