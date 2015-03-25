@@ -12,21 +12,22 @@
 <img src="/public/img/head.png" alt="" />
 </div>
 
-<div id="content" class="container">
-	<img class="index-img" src="http://fiona23.github.io/blog//public/img/body1.png" />	
-	<img class="index-img" src="http://fiona23.github.io/blog//public/img/body2.png" />
-	<img class="index-img" src="http://fiona23.github.io/blog//public/img/body3.png" />
+<div id="index-content" class="container">
+	<img class="index-img" src="/public/img/body1.png" />	
+	<img class="index-img" src="/public/img/body2.png" />
+	<img class="index-img" src="/public/img/body3.png" />
 
         
-	<div id="blog-list">
+	<div class="blog-block">
         <p class="blog-title">
-        26 Mar 2015 <a class="blog-title" href="/2015/03/26/kite/">春天到了</a>
+        26 Mar 2015 <a class="blog-title" href="/2015/03/26/kite/">有关jekyll serve和githubpage的url</a>
        
 	</p>
 	
 	<p class="blog-content">
 	<p>
-春天到了，今天和胡jy, 胡s, 孙qx，一块儿在学校传说中亚洲最大的校园草坪上放风筝了，哈哈！
+今天弄jekyll博客的时候发现，如果在文件中将相对地址设置为 /css/main.css
+在jekyll serve中能够正常显示，但是在githubpage中，如果博客的地址是:username.github.io/blog/，则无法正确读取css或者js img的地址，因为默认地址是username.github.io, 后来谷歌出，只要把/css/main.css改成 /css/main.css就可以啦
 </p>
 
 
@@ -35,7 +36,7 @@
 	 </p>
 	</div>
 
-	<div id="blog-list">
+	<div class="blog-block">
         <p class="blog-title">
         23 Mar 2015 <a class="blog-title" href="/%E7%94%9F%E6%B4%BB/2015/03/23/myFirstBlog/">第一篇博客</a>
        

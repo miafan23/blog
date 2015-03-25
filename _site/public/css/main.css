@@ -14,7 +14,7 @@ a:link, a:visited, a:hover{
 }
 
 /*index*/
-#content{
+#index-content{
 	position:relative;
 }
 
@@ -23,5 +23,14 @@ a:link, a:visited, a:hover{
 	z-index:-5;
 }
 
+.blog-block{
+	width:450px;
+	position:absolute;
+	z-index:1;
+}
 
+#index-content{
+	height:1200px;
+
+}
 /*index end*/
