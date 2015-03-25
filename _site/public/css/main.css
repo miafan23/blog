@@ -6,6 +6,7 @@ body{
 	font-family:华文细黑,'AvenirNextLTW01-Regular',微软雅黑;
 	font-weight:lighter;	
 	color:#464646;
+	background:url("/public/img/bg.png");
 }
 
 .container{
@@ -27,7 +28,7 @@ hr{
 /*index*/
 #index-head{
 	position:relative;
-	height:400px;
+	height:280px;
 	
 }
 
@@ -43,6 +44,8 @@ hr{
 
 #index-content{
 	position:relative;
+	margin-top:50px;
+
 }
 
 .index-img{
