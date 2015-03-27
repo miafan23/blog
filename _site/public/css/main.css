@@ -25,6 +25,12 @@ hr{
 
 
 }
+
+ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
 /*index*/
 #index-head{
 	position:relative;
@@ -68,3 +74,30 @@ hr{
 
 }
 /*index end*/
+
+/*post*/
+
+.post{
+
+	background:url("/blog/public/img/bg.png");
+	border: 1px solid #efefef;
+}
+
+	.post h2{
+			font-size: 14px;
+			font-weight: normal;
+			border-radius:3px;
+}
+/*post end*/
+
+/*footer*/
+#footer{
+	text-align: center;
+	font-size: 12px;
+}
+
+/*footer end*/
+
+
+
+

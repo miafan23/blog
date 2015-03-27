@@ -20,7 +20,7 @@
   <div class="post-head">
     <h1 class="post-title">
       <a class="post-title-blog" href="">
-        第一篇博客
+        有关jekyll serve和githubpage的url
       </a>
     </h1>
       <p class="post-info">
@@ -29,39 +29,33 @@
         
       </p>
       <img src="/blog/public/img/tag.png" />
-      <span class="post-info">&nbsp2015/03/23  </span>
+      <span class="post-info">&nbsp2015/03/25  </span>
       <span class="post-info"><i class="fa fa-book"></i>&nbsp<a href="/category/index.html#生活">生活</a></span>
       <span class="post-info"><i class="fa fa-tags"></i>&nbsp<a href="/tag/index.html#"></a></span> 
       <span class="post-info">&nbsp<a href="/tag/index.html#"></a></span>
       <span class="post-info">&nbsp<a href="/tag/index.html#"></a></span>
   </div><!--post head-->
   <div class="post-content">
-    <p>今天安装了ubuntu的虚拟机，算是第一次正式开始使用linux，感觉还不错，很漂亮呀，
-虚拟机也没想象中那么慢，分了2G的内存给它，觉得速度还可以，就是这中文输入法实在不
-咋地。</p>
+    <p>
+今天弄jekyll博客的时候发现，如果在文件中将相对地址设置为 /css/main.css,
+在jekyll serve中能够正常显示，但是在githubpage中，如果博客的地址是:username.github.io/blog/，则无法正确读取css或者js img的地址，因为默认地址是username.github.io,但是如果在相对地址前面加上blog/，在jekyllserve中又无法争取显示了。
+</p>
 
 
 
 
-<p>折腾了半天总算把搜狗输入法装上了，ibus一直出问题，出不来，结果等我把搜狗输入>法装上以后它又出现在右上角了，但是试了一下依然用不了就是了。</p>
-
-
-<p> excerpt_separator</p>
-
-<p>也是折腾了一下午加一晚上啊，不过尝试新的东西总是有趣的，感受了linux下安装软件
-觉得好爽，输入几行命令，就开始刷刷刷了～</p>
-
-
+<p>后来谷歌出，只要把/css/main.css改成 {\{site.baseurl }\}/css/main.css就可以啦(大括号里面的\是防止大括号被liquid模板解释的，不要一块儿输进去咯)
+</p>
 
     
   </div>
 
   <div class="">
     
-      <a class="" href="">上一篇&nbsp</a>
+      <a class="" id="lastest">已经是最新一篇&nbsp</a>
     
     
-      <a class="" id="lastone">&nbsp 已经是最后一篇</a>
+      <a class="" href="">第一篇博客&nbsp</a>
     
   </div>
 
@@ -69,7 +63,7 @@
 <h2>Comments</h2>
 <!-- Disqus Comment BEGIN -->  
 <!--duoshuo  start -->
-	<div class="ds-thread" data-thread-key="fiona23" data-title="第一篇博客" data-url=""</div>
+	<div class="ds-thread" data-thread-key="fiona23" data-title="有关jekyll serve和githubpage的url" data-url=""</div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
