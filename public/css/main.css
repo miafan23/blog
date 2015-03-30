@@ -10,7 +10,7 @@ body{
 }
 
 .container{
-	width:960px;
+	width:980px;
 	margin: 0 auto;
 }
 
@@ -18,9 +18,21 @@ a:link, a:visited, a:hover{
 	text-decoration:none;
 }
 
+a:link, a:visited{
+	color:#464646;
+}
+
+a:hover{
+	color:#bb2222;
+}
+
+i:hover{
+	color:#bb2222;
+}
+
 hr{
 	width:80%;	
-	border:1px solid #cdcdcd;
+	border:1px solid #f0f0f0;
 	margin:0 auto;
 
 
@@ -73,14 +85,24 @@ ul{
 	height:1200px;
 
 }
+
+#index-head ul {
+	position:absolute;
+	bottom:0;
+}
+
+  #index-head ul li{
+	float:left;
+	padding-right:40px;
+}
 /*index end*/
 
 /*post*/
 
 .post{
 
-	background:url("/blog/public/img/bg.png");
-	border: 1px solid #efefef;
+/*	background:url("/blog/public/img/bg.png");
+	border: 1px solid #efefef;*/
 }
 
 	.post h2{
@@ -88,6 +110,42 @@ ul{
 			font-weight: normal;
 			border-radius:3px;
 }
+
+	.post img{
+	 		max-width:940px;
+			padding: 20px;
+}
+	
+#divider{
+	position:relative;
+	z-index:1;
+	overflow:hidden;
+	text-align:center;
+}
+
+#divider:before{
+	 margin-left: -50%;
+	 text-align: right;
+}
+
+#divider:after{
+	  margin-left: 1%;
+}
+
+#divider:before, #divider:after{
+	position: absolute;
+	top: 51%;
+	overflow: hidden;
+	width: 49%;
+	height: 2px;
+	content: '\a0';
+	background-color: #f0f0f0;
+}
+
+#divider i{
+	margin:5%;
+}
+
 /*post end*/
 
 /*footer*/

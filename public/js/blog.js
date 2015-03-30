@@ -28,7 +28,11 @@ function headImg(){
 	var pWidth = $p.width();
 	var  bodyWidth = $('body').width();
 	var imgLeft = parseInt((bodyWidth - imgWidth-pWidth)/2+pWidth);
+	var $content = $('#index-content');
+	var contentLeft = parseInt((bodyWidth-$content.width())/2)
+	var $ul = $('#index-head').find('ul');
 	$img.css("left",imgLeft+'px');
 	$p.css("left",parseInt((bodyWidth - imgWidth-pWidth)/2)+'px')
+	$ul.css("left",contentLeft+'px')
 
 }

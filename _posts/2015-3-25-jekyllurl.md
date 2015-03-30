@@ -3,7 +3,7 @@ layout: post
 author: fiona
 title: 有关jekyll serve和githubpage的url
 category: 生活
-tag: []
+tag: [jekyll]
 ---
 
 <p>

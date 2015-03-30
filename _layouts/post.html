@@ -18,27 +18,26 @@ layout: default
           转载{{ page.author }}
         {% endif %}
       </p>
-      <img src="{{ site.baseurl }}/public/img/tag.png" />
       <span class="post-info">&nbsp{{ page.date | date: "%Y" }}/{{ page.date | date: "%m" }}/{{ page.date | date: "%d" }}  </span>
-      <span class="post-info"><i class="fa fa-book"></i>&nbsp<a href="/category/index.html#{{ page.categories }}">{{ page.categories }}</a></span>
-      <span class="post-info"><i class="fa fa-tags"></i>&nbsp<a href="/tag/index.html#{{ page.tags | first }}">{{ page.tags | first }}</a></span> 
-      <span class="post-info">&nbsp<a href="/tag/index.html#{{ page.tags[1] }}">{{ page.tags[1] }}</a></span>
-      <span class="post-info">&nbsp<a href="/tag/index.html#{{ page.tags[2] }}">{{ page.tags[2] }}</a></span>
+      <span class="post-info"><a href="{{ site.baseurl }}/category/index.html#{{ page.categories }}"><i class="fa fa-book"></i>{{ page.categories }}</a></span>
+      <span class="post-info"><a href="{{ site.baseurl }}/tag/index.html#{{ page.tags | first }}"><i class="fa fa-tags"></i>{{ page.tags | first }}</a></span> 
+      <span class="post-info">&nbsp<a href="{{ site.baseurl }}/tag/index.html#{{ page.tags[1] }}">{{ page.tags[1] }}</a></span>
+      <span class="post-info">&nbsp<a href="{{ site.naseurl }}/tag/index.html#{{ page.tags[2] }}">{{ page.tags[2] }}</a></span>
   </div><!--post head-->
   <div class="post-content">
     {{ content }}    
   </div>
 
-  <div class="">
-    {% if page.next %}
-      <a class="" href="{{ base.url/page.next.url}}">上一篇&nbsp</a>
-    {% else %}
-      <a class="" id="lastest">已经是最新一篇&nbsp</a>
-    {% endif %}
+  <div id="divider">
     {% if page.previous %}
-      <a class="" href="{{ base.url/page.previous.url}}">{{ page.previous.title }}&nbsp</a>
+      <a class="" href="{{ site.baseurl }}/{{ page.next.url}}"><i class="fa fa-chevron-left"></i></a>
     {% else %}
-      <a class="" id="lastone">&nbsp 已经是最后一篇</a>
+      <a class="" id="lastest"><i class="fa fa-circle"></i></a>
+    {% endif %}
+    {% if page.next %}
+      <a class="" href="{{ site.baseurl }}/{{ page.previous.url}}"><i class="fa fa-chevron-right"></i></a>
+    {% else %}
+      <a class="" id="lastone"><i class="fa fa-circle"></i></a>
     {% endif %}
   </div>
 
