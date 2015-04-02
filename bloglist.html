@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div id="blog-list" class="container">
+<h2></h2>
+<ul>
+<li id="year">2015</li>
+{% for post in site.posts %}
+<li>
+{{ post.date | date_to_string }} <a class="blog-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
