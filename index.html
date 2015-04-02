@@ -4,8 +4,8 @@ title: Home
 ---
 <div id="index-head">
 <ul>
-  <li><a href="{{ site.baseurl}}/bloglist.md">blog</a></li>
-  <li><a href="{{ site.baseurl }}/gallery.md">gllery</a></li>
+  <li><a href="{{ site.baseurl}}/bloglist/index.html">blog</a></li>
+  <li><a href="{{ site.baseurl }}/gallery/index.html">gllery</a></li>
   <li><a href="{{ site.baseurl }}/about/index.html">about</a></li>
 </ul>
 <div id="describe">
@@ -21,8 +21,7 @@ title: Home
 	<img class="index-img" src="{{ site.baseurl }}/public/img/body1.png" />	
 	<img class="index-img" src="{{ site.baseurl }}/public/img/body2.png" />
 	<img class="index-img" src="{{ site.baseurl }}/public/img/body3.png" />
-
-        {% for post in site.posts %}
+	{% for post in site.posts limit:3 %}
 	<div class="blog-block">
         <p class="blog-title">
         {{ post.date | date_to_string }} <a class="blog-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>

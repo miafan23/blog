@@ -1,7 +1,7 @@
 Layout('.index-img', 0);
 Layout('.blog-block',1);
 headImg();
-
+bloglist();
 function Layout(event, num){
     $event = $(event);
     for (var i=0; i<$event.length; i++){
@@ -35,4 +35,28 @@ function headImg(){
 	$p.css("left",parseInt((bodyWidth - imgWidth-pWidth)/2)+'px')
 	$ul.css("left",contentLeft+'px')
 
+}
+
+function bloglist(){
+	var $bloglist = $('#blog-list').find('li');
+	var opacity = 0;
+	var i=1;
+	var timer;
+	fade(i);
+	function fade(num){
+		if(opacity >= 1) {
+		clearTimeout(timer);
+		opacity = 0;
+		fade(num+1);
+		}else{	
+	opacity = opacity+0.1;
+	$bloglist.eq(num).css('opacity',opacity);
+	timer = setTimeout(rfade(num),50)}
+	}
+	function rfade(num){
+		return function(){
+			fade(num)
+		}
+	}
+	
 }
