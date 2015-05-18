@@ -23,49 +23,37 @@
   <div class="post-head">
     <h1 class="post-title">
       <a class="post-title-blog" href="">
-        使用setTimeout传参数
+        参加百度ife培训有感
       </a>
     </h1>
       <p class="post-info">
         
-          转载
+          fiona原创
         
       </p>
-      <span class="post-info">&nbsp2015/04/02  </span>
+      <span class="post-info">&nbsp2015/04/23  </span>
       <span class="post-info"><a href="/blog/category/index.html#"><i class="fa fa-book"></i></a></span>
-      <span class="post-info"><a href="/blog/tag/index.html#"><i class="fa fa-tags"></i></a></span> 
+      <span class="post-info"><a href="/blog/tag/index.html#ife"><i class="fa fa-tags"></i>ife</a></span> 
       <span class="post-info">&nbsp<a href="/blog/tag/index.html#"></a></span>
       <span class="post-info">&nbsp<a href="/tag/index.html#"></a></span>
   </div><!--post head-->
   <div class="post-content">
-    <p>今天在一个博客上看到了博客一条一条显示的效果觉得很优雅，所以也尝试做一个这样的效果。想法是使用setTimeout来控制条目的opacity，形成淡入的效果，在第一条淡入完成以后，再让第二条淡入。这样的话我的fade函数需要传入一个参数来控制是第几条条目。但是标准的setTimeout(fade，1000)，fade只是函数名，不带(),因此不能传入参数。如果直接setTimeout(fade(num),1000)会发现没有延时效果了</p>
+    <p>从开始参加培训到现在刚好十天，在刚开始得知没有入选时无比伤心，各种发邮件私信无效，不过申请加群的时候，可能祖明大大一个不小心吧，我也进了入选的QQ群。氛围比另一个虽然人更多的群要热烈一点。</p>
 
+<p>学到差不多现在这个程度有百度这样一个培训，觉得自己运气还是蛮好的（虽然没选上。。我现在对运气的要求就只有这么低）跟着百度的培训走最大的感想就是，自学一个很大的问题就是一些看起来比较难的不想涉及的东西就不会去逼自己做。之前凡是比较复杂的布局自己在设计的时候基本不会涉及，所以这次就暴露出自己在布局方面的各种知识盲点。现在正在做的JS任务也补上了一些之前不太熟悉的正则表达式以及AJAX的知识点。</p>
 
+<p>之前找实习的受挫让自己更加清楚了解到自己就是一个渣渣渣。每天都是一个发现自己昨天是傻逼的过程，现在甚至觉得每刻都在发现自己上一刻是傻逼的过程。</p>
 
-
-<p>后来经过谷歌，得到解决方案可以使用闭包来返回一个没有参数的函数，代码如下</p>
-
-
-
-
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">ofade</span><span class="p">(</span><span class="nx">num</span><span class="p">),</span><span class="mi">1000</span><span class="p">);</span>
-<span class="kd">function</span> <span class="nx">ofade</span><span class="p">(</span><span class="nx">num</span><span class="p">){</span>
-    <span class="k">return</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">fade</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
-
-
-
+<p>未来形势很严峻，不知道会怎么样。只是会努力都还不够，更加需要的是方法和方向。但是一切也只能尽人事，对得起自己这两年就好。</p>
     
   </div>
 
   <div id="divider">
     
-      <a class="" href="/blog//2015/04/23/ife/"><i class="fa fa-chevron-left"></i></a>
+      <a class="" href="/blog//2015/05/04/ifetask2/"><i class="fa fa-chevron-left"></i></a>
     
     
-      <a class="" href="/blog//2015/03/30/baidunaotu/"><i class="fa fa-chevron-right"></i></a>
+      <a class="" href="/blog//2015/04/02/setTimeout/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 
@@ -73,7 +61,7 @@
 <h2>Comments</h2>
 <!-- Disqus Comment BEGIN -->  
 <!--duoshuo  start -->
-	<div class="ds-thread" data-thread-key="fiona23" data-title="使用setTimeout传参数" data-url=""</div>
+	<div class="ds-thread" data-thread-key="fiona23" data-title="参加百度ife培训有感" data-url=""</div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

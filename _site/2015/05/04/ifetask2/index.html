@@ -23,49 +23,56 @@
   <div class="post-head">
     <h1 class="post-title">
       <a class="post-title-blog" href="">
-        使用setTimeout传参数
+        task02学习笔记
       </a>
     </h1>
       <p class="post-info">
         
-          转载
+          fiona原创
         
       </p>
-      <span class="post-info">&nbsp2015/04/02  </span>
+      <span class="post-info">&nbsp2015/05/04  </span>
       <span class="post-info"><a href="/blog/category/index.html#"><i class="fa fa-book"></i></a></span>
-      <span class="post-info"><a href="/blog/tag/index.html#"><i class="fa fa-tags"></i></a></span> 
+      <span class="post-info"><a href="/blog/tag/index.html#ife"><i class="fa fa-tags"></i>ife</a></span> 
       <span class="post-info">&nbsp<a href="/blog/tag/index.html#"></a></span>
       <span class="post-info">&nbsp<a href="/tag/index.html#"></a></span>
   </div><!--post head-->
   <div class="post-content">
-    <p>今天在一个博客上看到了博客一条一条显示的效果觉得很优雅，所以也尝试做一个这样的效果。想法是使用setTimeout来控制条目的opacity，形成淡入的效果，在第一条淡入完成以后，再让第二条淡入。这样的话我的fade函数需要传入一个参数来控制是第几条条目。但是标准的setTimeout(fade，1000)，fade只是函数名，不带(),因此不能传入参数。如果直接setTimeout(fade(num),1000)会发现没有延时效果了</p>
+    <h1>task02学习笔记</h1>
 
+<h2>积累</h2>
 
+<h3>深度克隆</h3>
 
+<p>当需要克隆的对象是对象和数组的时候，需要进行深度克隆，在改变克隆后的对象时才不会影响原对象。 <br/>
+方法是通过递归克隆所有属性和方法，或数组中的元素。</p>
 
-<p>后来经过谷歌，得到解决方案可以使用闭包来返回一个没有参数的函数，代码如下</p>
+<h3>正则表达式</h3>
 
+<p>^和$的用处：之前一直不太明白这两个的用处，觉得可有可无，不清楚开始和结束标识的意思。现在知道就是在需要检验的字符串中开始结尾不能再比^和$包含的正则表达式多出内容，否则不匹配。<br/>
+如果正则表达式中需要用到变量，则必须使用 <code>new RegExp()</code><br/>
+<code>$1</code> 的用法：在做属性选择器的时候，需要匹配 <code>[type=XXX]</code>，想法就是用正则来找到<code>[ ]</code>，然后就涉及到一个问题，要去掉中括号保留中括号里面的字符串，这时候就可以用到<code>$1</code>， 具体做法是 <code>selector.replace(/\[([^\[\]]*)\]/, '$1')</code>。</p>
 
+<h3>DOM0事件和DOM2事件</h3>
 
+<p>DOM0事件是handler例如：<code>foo.onclick = fn</code>
+DOM2是事件监听例如：<code>addEventListener('click', fn, false)</code> IE下是 <code>attachEvent('onclick', fn)</code>
+区别在于， DOM2 监听事件可以让多个函数响应一个事件而DOM0 事件处理器不行<br/>
+DOM0清除事件直接赋值null，DOM2清除所有事件则需要复制原DOM</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">ofade</span><span class="p">(</span><span class="nx">num</span><span class="p">),</span><span class="mi">1000</span><span class="p">);</span>
-<span class="kd">function</span> <span class="nx">ofade</span><span class="p">(</span><span class="nx">num</span><span class="p">){</span>
-    <span class="k">return</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">fade</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<h3>AJAX</h3>
 
-
-
+<p>如果<code>type = get</code> 则 <code>send</code>的数据直接在url上<br/>
+如果<code>type = post</code> 则将需要<code>send(data)</code>,data可以是用&amp;连接的字符串，或者键值对象。并且需要 <code>xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")</code></p>
     
   </div>
 
   <div id="divider">
     
-      <a class="" href="/blog//2015/04/23/ife/"><i class="fa fa-chevron-left"></i></a>
+      <a class="" href="/blog/"><i class="fa fa-chevron-left"></i></a>
     
     
-      <a class="" href="/blog//2015/03/30/baidunaotu/"><i class="fa fa-chevron-right"></i></a>
+      <a class="" id="lastone"><i class="fa fa-circle"></i></a>
     
   </div>
 
@@ -73,7 +80,7 @@
 <h2>Comments</h2>
 <!-- Disqus Comment BEGIN -->  
 <!--duoshuo  start -->
-	<div class="ds-thread" data-thread-key="fiona23" data-title="使用setTimeout传参数" data-url=""</div>
+	<div class="ds-thread" data-thread-key="fiona23" data-title="task02学习笔记" data-url=""</div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

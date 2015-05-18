@@ -2,38 +2,18 @@
 layout: default
 title: Home
 ---
-<div id="index-head">
+<div id="blog-list" class="container">
+<h2></h2>
 <ul>
-  <li><a href="{{ site.baseurl}}/bloglist/index.html">blog</a></li>
-  <li><a href="{{ site.baseurl }}/gallery/index.html">gallery</a></li>
-  <li><a href="{{ site.baseurl }}/about/index.html">about</a></li>
-</ul>
-<div id="describe">
-<p>
-欢迎来到fiona的博客。
-暂时图文无关。。
-</p>
-</div>
-<img src="{{ site.baseurl }}/public/img/head.png" alt="" />
-</div>
-<hr>
-<div id="index-content" class="container">
-	<img class="index-img" src="{{ site.baseurl }}/public/img/body1.png" />	
-	<img class="index-img" src="{{ site.baseurl }}/public/img/body2.png" />
-	<img class="index-img" src="{{ site.baseurl }}/public/img/body3.png" />
-	{% for post in site.posts limit:3 %}
-	<div class="blog-block">
-        <p class="blog-title">
-        {{ post.date | date_to_string }} <a class="blog-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-       
-	</p>
-	
-	<p class="blog-content">
-	{{ post.excerpt }}
-	 </p>
-	</div>
+<li id="year" class="year-movein">2015</li>
+{% for post in site.posts %}
+<li>
+{{ post.date | date_to_string }} <a class="blog-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+</li>
+
 {% endfor %}
 
-</div>
+</ul>
 
+</div>
 

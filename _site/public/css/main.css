@@ -1,118 +1,61 @@
 
-body{
-	padding:0;
-	margin:0;
-	font-size:14px;
-	font-family:华文细黑,'AvenirNextLTW01-Regular',微软雅黑;
-	font-weight:lighter;	
-	color:#464646;
-	background:url("/public/img/bg.png");
-}
-
-body,html{
-	height:100%;
-}
 
 .container{
-	width:980px;
-	margin: 0 auto;
+    width:980px;
+    margin: 0 auto;
 }
 
 a:link, a:visited, a:hover{
-	text-decoration:none;
+    text-decoration:none;
 }
 
 a:link, a:visited{
-	color:#464646;
+    color:#464646;
 }
 
 a:hover{
-	color:#bb2222;
+    color:#bb2222;
 }
 
 i:hover{
-	color:#bb2222;
+    color:#bb2222;
 }
 
 hr{
-	width:80%;	
-	border:1px solid #f0f0f0;
-	margin:0 auto;
+    width:80%;	
+    border:1px solid #f0f0f0;
+    margin:0 auto;
 
 
 }
-
-ul{
-	list-style:none;
-	padding:0;
-	margin:0;
+/*header*/
+header {
+    width: 100%;
+    min-width: 980px;
+    height: 50px;
+    line-height: 50px;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 5px 0 rgba(0,0,0,0.04), 0 10px 10px rgba(0,0,0,0.03), 0 1px 0 rgba(0,0,0,0.05);
 }
+
+nav {
+    float: right;
+}
+
+nav ul>li {
+    display: inline-block;
+    padding: 0 20px;
+}
+/*header end*/
+
 /*index*/
-#index-head{
-	position:relative;
-	height:280px;
-	
-}
-
-	#index-head img{
-		position:absolute;
-	}
-
-	#index-head #describe{
-		position:absolute;
-		width:150px;
-	 	padding-top:40px;	
-	}
-
-#index-content{
-	position:relative;
-	margin-top:50px;
-
-}
-
-.index-img{
-	position:absolute;
-	z-index:-5;
-}
-
-.blog-block{
-	width:450px;
-	padding:50px 0 0 20px;
-	position:absolute;
-	z-index:1;
-}
-
-	.blog-block p{
-		line-height:27px;
-	}
-#index-content{
-	height:1200px;
-
-}
-
-#index-head ul {
-	position:absolute;
-	bottom:0;
-}
-
-  #index-head ul li{
-	float:left;
-	padding-right:40px;
-}
-/*index end*/
 
 /*post*/
 
-.post{
-
-/*	background:url("/blog/public/img/bg.png");
-	border: 1px solid #efefef;*/
-}
-
-	.post h2{
-			font-size: 14px;
-			font-weight: normal;
-			border-radius:3px;
+    .post h2{
+	font-size: 14px;
+	font-weight: normal;
+	border-radius:3px;
 }
 
 	.post img{
@@ -169,10 +112,10 @@ ul{
 
 #blog-list ul li{
     opacity: 0;
-  line-height: 2;
-position:relative;  
-border-left: 3px solid #f0f0f0;
-padding:50px 0 0 50px;
+    line-height: 2;
+    position:relative;  
+    border-left: 3px solid #f0f0f0;
+    padding:50px 0 0 50px;
  /* transition: opacity 2s;
     -moz-transition: opacity 2s;
     -webkit-transition: opacity 2s;
