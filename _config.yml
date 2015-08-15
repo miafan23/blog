@@ -11,13 +11,12 @@ permalink:        pretty
 title:            fiona
 tagline:          '从这里出初江湖，携手仗剑江湖路'
 description:      'Hello'
-baseurl:              /blog
+baseurl:           /blog
 author:
   name:           'fiona'
   url:            https://github.com/fiona23
 
-paginate:        2
-paginate_path:   "blog/bloglist/page:num"
+paginate:        5
 
 # Custom vars
 version:          1.0.0

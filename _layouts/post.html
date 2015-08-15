@@ -10,13 +10,6 @@ layout: default
         {{ page.title }}
       </a>
     </h1>
-      <p class="post-info">
-        {% if page.author == "fiona" %}
-          {{ page.author }}原创
-        {% else %}
-          转载{{ page.author }}
-        {% endif %}
-      </p>
       <span class="post-info">&nbsp{{ page.date | date: "%Y" }}/{{ page.date | date: "%m" }}/{{ page.date | date: "%d" }}  </span>
       <span class="post-info"><a href="{{ site.baseurl }}/category/index.html#{{ page.categories }}"><i class="fa fa-book"></i>{{ page.categories }}</a></span>
       <span class="post-info"><a href="{{ site.baseurl }}/tag/index.html#{{ page.tags | first }}"><i class="fa fa-tags"></i>{{ page.tags | first }}</a></span> 

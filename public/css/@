@@ -1,0 +1,166 @@
+.container{
+    width:980px;
+    margin: 0 auto;
+}
+
+a:link, a:visited, a:hover{
+    text-decoration:none;
+}
+
+a:link, a:visited{
+    color:#464646;
+}
+
+a:hover{
+    color:#bb2222;
+}
+
+i:hover{
+    color:#bb2222;
+}
+
+hr{
+    width:80%;	
+    border:1px solid #f0f0f0;
+    margin:0 auto;
+}
+/*header*/
+header {
+    width: 100%;
+    min-width: 980px;
+    height: 50px;
+    line-height: 50px;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 5px 0 rgba(0,0,0,0.04), 0 10px 10px rgba(0,0,0,0.03), 0 1px 0 rgba(0,0,0,0.05);
+}
+
+nav {
+    float: right;
+}
+
+nav ul>li {
+    display: inline-block;
+    padding: 0 20px;
+}
+/*header end*/
+
+/*index*/
+
+/*post*/
+
+#divider{
+	position:relative;
+	z-index:1;
+	overflow:hidden;
+	text-align:center;
+}
+
+#divider:before{
+	 margin-left: -50%;
+	 text-align: right;
+}
+
+#divider:after{
+	  margin-left: 1%;
+}
+
+#divider:before, #divider:after{
+	position: absolute;
+	top: 51%;
+	overflow: hidden;
+	width: 49%;
+	height: 2px;
+	content: '\a0';
+	background-color: #f0f0f0;
+}
+
+#divider i{
+	margin:5%;
+}
+
+
+/*post end*/
+
+/*footer*/
+#footer{
+	text-align: center;
+	font-size: 12px;
+}
+
+/*footer end*/
+
+
+
+/*blog-list*/
+#blog-list-wrapper {
+    overflow:hidden;
+}
+
+#title-show {
+    width:50%;
+    float:left;
+}
+
+#blog-list{
+    width:50%;
+    float: left;
+    padding:25px 50px;
+}
+
+ /* transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -webkit-transition: opacity 2s;
+    -o-transition: opacity 2s;*/
+}
+#blog-list ul li a{
+  position:relative;
+  border-bottom: none;
+  vertical-align: top;
+}
+
+#blog-list ul li::before{
+	content:"\f111";
+	font-family: FontAwesome;
+	font-size: 8px;
+	color: #cdcdcd;
+	position:absolute;
+	left: -5px;
+	top:55px;
+}
+
+#blog-list ul li a::before{
+  content: "";
+  width: 100%;
+  height: 1px;
+  display:inline-block;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background-color:#bb2222;
+  transition-duration: 0.2s;
+  transform: scaleX(0);
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  visibility: hidden;
+}
+
+
+
+#blog-list ul li a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+#blog-list #year{
+	opacity:1;
+	font-size:36px;
+	padding-bottom:50px;
+	padding-top:0;
+	
+}
+
+#blog-list #year::before{
+	top:30px;
+}
+
+
