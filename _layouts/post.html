@@ -3,37 +3,35 @@ layout: default
 ---
 
 <div class="post container">
-<h2><a href="{{ site.baseurl }}">首页</a> / Blog</h2>
+    <h2><a href="http://fiona23.github.io">首页</a>/<a href="{{ site.baseurl }}">Blog</a></h2>
   <div class="post-head">
     <h1 class="post-title">
       <a class="post-title-blog" href="{{ post.url }}">
         {{ page.title }}
       </a>
     </h1>
-      <span class="post-info">&nbsp{{ page.date | date: "%Y" }}/{{ page.date | date: "%m" }}/{{ page.date | date: "%d" }}  </span>
-      <span class="post-info"><a href="{{ site.baseurl }}/category/index.html#{{ page.categories }}"><i class="fa fa-book"></i>{{ page.categories }}</a></span>
-      <span class="post-info"><a href="{{ site.baseurl }}/tag/index.html#{{ page.tags | first }}"><i class="fa fa-tags"></i>{{ page.tags | first }}</a></span> 
-      <span class="post-info">&nbsp<a href="{{ site.baseurl }}/tag/index.html#{{ page.tags[1] }}">{{ page.tags[1] }}</a></span>
-      <span class="post-info">&nbsp<a href="{{ site.naseurl }}/tag/index.html#{{ page.tags[2] }}">{{ page.tags[2] }}</a></span>
+    <span class="info">发表于<time>&nbsp{{ page.date | date: "%Y" }}-{{ page.date | date: "%m" }}-{{ page.date | date: "%d" }}</time></span>
+      <span class="info"><a href="{{ site.baseurl }}/tag/index.html#{{ page.tags | first }}"><i class="fa fa-tags"></i>{{ page.tags | first }}</a></span> 
+      <span class="info">&nbsp<a href="{{ site.baseurl }}/tag/index.html#{{ page.tags[1] }}">{{ page.tags[1] }}</a></span>
+      <span class="info">&nbsp<a href="{{ site.naseurl }}/tag/index.html#{{ page.tags[2] }}">{{ page.tags[2] }}</a></span>
   </div><!--post head-->
   <div class="post-content">
     {{ content }}    
   </div>
 
   <div id="divider">
-    {% if page.previous %}
-      <a class="" href="{{ site.baseurl }}/{{ page.next.url}}"><i class="fa fa-chevron-left"></i></a>
+    {% if page.next %}
+      <a class="" href="{{ site.baseurl }}/{{ page.next.url}}" title="上一篇"><i class="fa fa-chevron-left"></i></a>
     {% else %}
       <a class="" id="lastest"><i class="fa fa-circle"></i></a>
     {% endif %}
-    {% if page.next %}
-      <a class="" href="{{ site.baseurl }}/{{ page.previous.url}}"><i class="fa fa-chevron-right"></i></a>
+    {% if page.previous %}
+      <a class="" href="{{ site.baseurl }}/{{ page.previous.url}}" title="下一篇"><i class="fa fa-chevron-right"></i></a>
     {% else %}
       <a class="" id="lastone"><i class="fa fa-circle"></i></a>
     {% endif %}
   </div>
 
-<!-- <div class="comments"> -->
 
 <!-- 多说评论框 start -->
 {% include comment.html %}

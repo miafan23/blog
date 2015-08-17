@@ -48,13 +48,9 @@ title: Home
              <h1>枳的博客</h1> 
         </div>
         <div id="tags">
-            <ul class="tags-list">
             {% for tag in site.tags %}
-            <li class="tag-li">
-            <a href="{{ site.baseurl }}/tag/index.html#{{ tag | first}}">{{ tag | first }}</a>
-            </li>
+            <a href="{{ site.tags.tag }}">{{ tag | first }}</a>
             {% endfor %}
-            </ul>
         </div>
     </aside>
 </div>

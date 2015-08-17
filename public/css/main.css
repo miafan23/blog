@@ -56,6 +56,16 @@ nav ul > li {
 }
 /*header end*/
 /*index*/
+.tags-list {
+  width: 401px;
+  box-sizing: border-box;
+  border-right: 1px solid #464646;
+  margin: 0;
+}
+.tag-li {
+  text-align: right;
+  padding-right: 10px;
+}
 /*post*/
 #divider {
   position: relative;
@@ -154,4 +164,7 @@ nav ul > li {
 .blog-banner h1 {
   font-size: 25px;
   color: #464646;
+}
+.pagination {
+  text-align: right;
 }
