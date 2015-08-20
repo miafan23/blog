@@ -1,3 +1,5 @@
+@link-color: #428445;
+
 *{
     box-sizing: border-box;
     font-family: 'Microsoft Jhenghei','Microsoft Yahei'
@@ -9,8 +11,11 @@ html {
 
 body {
     font-size: 1.6rem;
+    &::selection, &::-moz-selection {
+        background-color: @link-color;
+       color: #fff;
+    }
 }
-
 h1{
     font-size: 3rem;
 }
@@ -25,6 +30,43 @@ ul {
 
 a {
     outline: none;
+}
+
+p {
+    line-height: 170%;
+}
+
+code {
+    background-color: #f7f7f7;
+    padding: 2px 5px 0 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 85%;
+}
+
+
+.highlight { 
+    background-color: #f7f7f7;
+    padding: 16px 16px;
+    &>pre {
+        padding: 0;
+        margin: 0;
+    };
+    code {
+        border: none;
+        padding: 0;
+    };
+    .c {
+        color: #999988;
+    };
+    .kd {
+        color: @link-color;
+        font-weight: bold;
+    };
+    .k {
+        color: @link-color;
+        font-weight:bold;
+    }
 }
 
 .transparent-overlay {

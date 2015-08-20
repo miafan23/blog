@@ -8,6 +8,11 @@ html {
 body {
   font-size: 1.6rem;
 }
+body::selection,
+body::-moz-selection {
+  background-color: #428445;
+  color: #fff;
+}
 h1 {
   font-size: 3rem;
 }
@@ -19,6 +24,39 @@ ul {
 }
 a {
   outline: none;
+}
+p {
+  line-height: 170%;
+}
+code {
+  background-color: #f7f7f7;
+  padding: 2px 5px 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 85%;
+}
+.highlight {
+  background-color: #f7f7f7;
+  padding: 16px 16px;
+}
+.highlight > pre {
+  padding: 0;
+  margin: 0;
+}
+.highlight code {
+  border: none;
+  padding: 0;
+}
+.highlight .c {
+  color: #999988;
+}
+.highlight .kd {
+  color: #428445;
+  font-weight: bold;
+}
+.highlight .k {
+  color: #428445;
+  font-weight: bold;
 }
 .transparent-overlay {
   opacity: 0.6;
