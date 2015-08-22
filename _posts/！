@@ -1,0 +1,43 @@
+---
+layout: post
+author: fiona
+title: 用canvas写一个开场动画
+tag: [javascript, canvas, 教程]
+---
+
+你是从首页无意中点进来的么？喜欢首页的那个旋转的动画的话，跟着这篇博客就能很快做出来哟！
+
+
+##step1
+最终的形状其实是下面这个图形不停旋转得到的， 所以第一步就是画出下面这个图形
+![枳]({{base.url/public/post/20150822_1.png}})
+
+
+{% highlight js %}
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+//注意不要使用css给canvas设定宽高
+canvas.setAttribute('width', '500');
+canvas.setAttribute('height', '500');
+
+var pie = {
+    count: 85,
+
+    draw: function(){
+        //将圆心移动到canvas中心
+        ctx.translate(125, 125)
+        var i = this.count;
+            while( i-- ) {
+            ctx.beginPath();
+            //实际就是画一堆同心圆，弧度在0-Math.PI/3间随机，为了更好的效果，起点和终点也都在小范围内随机了一下
+            ctx.arc(0, 0, i+(Math.random()*35), Math.random(), Math.PI/3+(Math.random()/12));
+            ctx.stroke();
+        }
+    }
+}
+{% endhighlight %}
+
+写完上面的代码以后，再 `pie.draw()` 你应该会得到之前给出的那个图形  
+
+##step2
+

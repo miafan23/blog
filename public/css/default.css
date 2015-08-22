@@ -24,6 +24,19 @@ ul {
 }
 a {
   outline: none;
+  text-decoration: none;
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+}
+a:link,
+a:visited {
+  color: #464646;
+}
+a:hover {
+  color: #428445;
 }
 p {
   line-height: 170%;
@@ -57,6 +70,12 @@ code {
 .highlight .k {
   color: #428445;
   font-weight: bold;
+}
+.highlight .nt {
+  color: #428445;
+}
+.highlight .s {
+  color: #ED4A56;
 }
 .transparent-overlay {
   opacity: 0.6;

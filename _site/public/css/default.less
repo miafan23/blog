@@ -1,10 +1,18 @@
 @link-color: #428445;
+@font-color: #464646;
 
 *{
     box-sizing: border-box;
     font-family: 'Microsoft Jhenghei','Microsoft Yahei'
 }
 
+.transition(@item: all, @time: 0.6s){
+    -webkit-transition: @item @time;
+       -moz-transition: @item @time;
+        -ms-transition: @item @time;
+         -o-transition: @item @time;
+            transition: @item @time;
+}
 html {
     font-size: 62.5%;
 }
@@ -30,6 +38,14 @@ ul {
 
 a {
     outline: none;
+    text-decoration: none;
+    &:link, &:visited {
+        color: @font-color;
+    }
+    &:hover {
+        color:@link-color;
+    };
+    .transition(all, 0.6s)
 }
 
 p {
@@ -66,6 +82,12 @@ code {
     .k {
         color: @link-color;
         font-weight:bold;
+    };
+    .nt {
+        color: @link-color;
+    };
+    .s {
+        color: #ED4A56;
     }
 }
 

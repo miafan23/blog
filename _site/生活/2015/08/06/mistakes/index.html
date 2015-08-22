@@ -24,6 +24,7 @@
          <li><a href="http://fiona23.github.io/">首页</a></li>
          <li><a href="/blog">画儿</a></li>
          <li><a href="/blog">博客</a></li>
+         <li><a href="http://fiona23.github.io/about">关于</a></li>
     </ul>
     </nav>
 </header>
@@ -37,18 +38,34 @@
       </a>
     </h1>
     <span class="info">发表于<time>&nbsp2015-08-06</time></span>
-      <span class="info"><a href="/blog/tag/index.html#"><i class="fa fa-tags"></i></a></span> 
+      <span class="info"><a href="/blog/tag/index.html#总结"><i class="fa fa-tags"></i>总结</a></span> 
       <span class="info">&nbsp<a href="/blog/tag/index.html#"></a></span>
       <span class="info">&nbsp<a href="/tag/index.html#"></a></span>
   </div><!--post head-->
   <div class="post-content">
-    <p>曾经以为自己记性很好，犯过的错不会再犯，但事实证明我妥妥的想多了。以后犯错并且花了很长时间才解决的都在这边博客里记录下来，引以为戒。</p>
+    <p>记录一些平时遇到的坑，加深印象</p>
+
+<h3>2015/8/22</h3>
+
+<h3>keyword: img li height</h3>
+
+<p>今天在修复首页之前的一个小bug的时候，发现 <code>li</code> 的高度要比 <code>img</code> 的高度高一点（代码结构如下）</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+
+<p>导致我连续竖排的图片总有一定缝隙。后来谷歌到是因为 <code>img</code> 是行内元素，会有一个与文字的baseline对应的下边沿的距离。<br/>
+设置 <code>img{ vertical-align:top; }</code> 就可以解决了。</p>
     
   </div>
 
   <div id="divider">
     
-      <a class="" id="lastest"><i class="fa fa-circle"></i></a>
+      <a class="" href="/blog//2015/08/22/welcomepic/" title="上一篇"><i class="fa fa-chevron-left"></i></a>
     
     
       <a class="" href="/blog//2015/05/04/ifetask2/" title="下一篇"><i class="fa fa-chevron-right"></i></a>

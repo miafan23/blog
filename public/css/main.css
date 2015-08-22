@@ -2,25 +2,6 @@
   width: 980px;
   margin: 0 auto;
 }
-a {
-  -webkit-transition: color 0.6s;
-  -moz-transition: color 0.6s;
-  -ms-transition: color 0.6s;
-  -o-transition: color 0.6s;
-  transition: color 0.6s;
-}
-a:link,
-a:visited,
-a:hover {
-  text-decoration: none;
-}
-a:link,
-a:visited {
-  color: #464646;
-}
-a:hover {
-  color: #428445;
-}
 i:hover {
   color: #428445;
   -webkit-transition: color 0.6s;

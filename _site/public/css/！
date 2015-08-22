@@ -24,6 +24,7 @@
          <li><a href="http://fiona23.github.io/">首页</a></li>
          <li><a href="/blog">画儿</a></li>
          <li><a href="/blog">博客</a></li>
+         <li><a href="http://fiona23.github.io/about">关于</a></li>
     </ul>
     </nav>
 </header>
@@ -49,6 +50,14 @@
             <a href="">jekyll</a>
             
             <a href="">ife</a>
+            
+            <a href="">总结</a>
+            
+            <a href="">javascript</a>
+            
+            <a href="">canvas</a>
+            
+            <a href="">教程</a>
             
         </div>
     </aside>
