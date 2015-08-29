@@ -31,6 +31,10 @@ header {
     line-height: 50px;
     background: rgba(255,255,255,0.9);
     box-shadow: 0 5px 0 rgba(0,0,0,0.04), 0 10px 10px rgba(0,0,0,0.03), 0 1px 0 rgba(0,0,0,0.05);
+    .icon {
+        width: 40px;
+        height:40px;
+    }
 }
 
 nav {
@@ -86,9 +90,20 @@ nav ul>li {
 	background-color: #f0f0f0;
 }
 
-.post-content img {
-    margin: 1em 0 2em 0;
-    max-width: 500px;
+.post-content {
+    img {
+        margin: 1em 0 2em 0;
+        max-width: 500px;
+    }
+
+    a {
+        color: @link-color;
+        font-weight: bold;
+        &:hover {
+            color: @font-color;
+        }
+        .transition(color, 0.6s)
+    }
 }
 
 #divider i{

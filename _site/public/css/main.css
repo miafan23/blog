@@ -24,6 +24,10 @@ header {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 5px 0 rgba(0, 0, 0, 0.04), 0 10px 10px rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.05);
 }
+header .icon {
+  width: 40px;
+  height: 40px;
+}
 nav {
   float: right;
 }
@@ -74,6 +78,18 @@ nav ul > li {
 .post-content img {
   margin: 1em 0 2em 0;
   max-width: 500px;
+}
+.post-content a {
+  color: #428445;
+  font-weight: bold;
+  -webkit-transition: color 0.6s;
+  -moz-transition: color 0.6s;
+  -ms-transition: color 0.6s;
+  -o-transition: color 0.6s;
+  transition: color 0.6s;
+}
+.post-content a:hover {
+  color: #464646;
 }
 #divider i {
   margin: 5%;

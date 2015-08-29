@@ -28,11 +28,11 @@ ul {
 a {
   outline: none;
   text-decoration: none;
-  -webkit-transition: all 0.6s;
-  -moz-transition: all 0.6s;
-  -ms-transition: all 0.6s;
-  -o-transition: all 0.6s;
-  transition: all 0.6s;
+  -webkit-transition: color 0.6s;
+  -moz-transition: color 0.6s;
+  -ms-transition: color 0.6s;
+  -o-transition: color 0.6s;
+  transition: color 0.6s;
 }
 a:link,
 a:visited {
@@ -86,7 +86,7 @@ code {
   color: #ED4A56;
 }
 .highlight .c1 {
-  color: #aaa;
+  color: #428445;
 }
 .highlight .nb {
   color: #253987;
