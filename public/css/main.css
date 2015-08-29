@@ -71,6 +71,10 @@ nav ul > li {
   content: '\a0';
   background-color: #f0f0f0;
 }
+.post-content img {
+  margin: 1em 0 2em 0;
+  max-width: 500px;
+}
 #divider i {
   margin: 5%;
 }

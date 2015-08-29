@@ -8,8 +8,11 @@ html {
 body {
   font-size: 1.6rem;
 }
-body::selection,
-body::-moz-selection {
+::-moz-selection {
+  background-color: #428445;
+  color: #fff;
+}
+::selection {
   background-color: #428445;
   color: #fff;
 }
@@ -38,8 +41,13 @@ a:visited {
 a:hover {
   color: #428445;
 }
+.inline-link {
+  color: #428445;
+  font-weight: bold;
+}
 p {
   line-height: 170%;
+  margin: 1em 0;
 }
 code {
   background-color: #f7f7f7;
@@ -76,6 +84,13 @@ code {
 }
 .highlight .s {
   color: #ED4A56;
+}
+.highlight .c1 {
+  color: #aaa;
+}
+.highlight .nb {
+  color: #253987;
+  font-weight: bold;
 }
 .transparent-overlay {
   opacity: 0.6;

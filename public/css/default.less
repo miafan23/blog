@@ -19,11 +19,17 @@ html {
 
 body {
     font-size: 1.6rem;
-    &::selection, &::-moz-selection {
-        background-color: @link-color;
+}
+::-moz-selection {
+       background-color: @link-color;
        color: #fff;
     }
-}
+
+    ::selection {
+
+       background-color: @link-color;
+       color: #fff;
+    }
 h1{
     font-size: 3rem;
 }
@@ -48,8 +54,14 @@ a {
     .transition(all, 0.6s)
 }
 
+.inline-link {
+    color:@link-color;
+    font-weight:bold;
+}
+
 p {
     line-height: 170%;
+    margin: 1em 0;
 }
 
 code {
@@ -88,6 +100,13 @@ code {
     };
     .s {
         color: #ED4A56;
+    }
+    .c1 {
+        color: #aaa;
+    }
+    .nb {
+        color: #253987;
+        font-weight: bold;
     }
 }
 
