@@ -1,8 +1,21 @@
 ---
 layout: default
-title: Home
+title: 枳的博客
 ---
 <div id="blog-list-wrapper">
+    <aside id="banner" class="banner-wrapper">
+
+        <h1 class="vertical-title">枳的博客</h1> 
+        <div id="tags">
+            <ul class="tags-list">
+            {% for tag in site.tags %}
+            <li class="tag-li">
+            <a href="{{ site.baseurl }}/tag/index.html#{{ tag | first}}">{{ tag | first }}</a>
+            </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </aside><!--banner end-->
     <section id="blog-list">
     
         <ul>
@@ -41,20 +54,15 @@ title: Home
             {% endif %}
 
 
-    </section>
-    <aside id="banner" class="banner-wrapper">
-
-        <div class="blog-banner">
-             <h1>枳的博客</h1> 
-        </div>
-        <div id="tags">
-            <ul class="tags-list">
-            {% for tag in site.tags %}
-            <li class="tag-li">
-            <a href="{{ site.baseurl }}/tag/index.html#{{ tag | first}}">{{ tag | first }}</a>
-            </li>
-            {% endfor %}
-            </ul>
-        </div>
-    </aside>
+        </section> <!--blog-list end -->
+</div><!--bloglist-wrapper ends-->
+<div class="exchange">
+    <div class="friends">
+        <h2 class="my-friends">我的朋友们</h3>
+        <ul class="friends-list">
+            <li><a href="http://zdx.link/">zdx</a></li>
+        </ul>
+        <p>如果你想和我交换友链可以在下面留言或者给我发<a class="inline-link" href="mailto:fiona_fanmy@163.com" title="fiona_fanmy@163.com">邮件</a>
+    </div>
+{% include comment.html %}
 </div>

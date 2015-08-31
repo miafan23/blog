@@ -2,6 +2,11 @@
   box-sizing: border-box;
   font-family: 'Microsoft Jhenghei', 'Microsoft Yahei';
 }
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
 html {
   font-size: 62.5%;
 }
@@ -25,6 +30,14 @@ h2 {
 ul {
   list-style: none;
 }
+a.inline-link:link,
+a.inline-link:visited {
+  font-weight: bold;
+  color: #428445;
+}
+a.inline-link:hover {
+  color: #464646;
+}
 a {
   outline: none;
   text-decoration: none;
@@ -41,9 +54,9 @@ a:visited {
 a:hover {
   color: #428445;
 }
-.inline-link {
-  color: #428445;
-  font-weight: bold;
+button:focus,
+button::-moz-focus-inner {
+  outline: none;
 }
 p {
   line-height: 170%;

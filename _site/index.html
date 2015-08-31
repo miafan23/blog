@@ -11,7 +11,7 @@
        ga('send', 'pageview');
     </script>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>枳的博客</title>
     <link rel="shortcut icon" type="image/x-icon" href="/blog/public/img/icon.ico" />
     <link rel="stylesheet" href="/blog/public/css/default.css" type="text/css">
     <link rel="stylesheet" href="/blog/public/css/main.css" type="text/css">
@@ -19,8 +19,11 @@
 </head>
 <body>
 <header>
-    <img class="icon" src="/blog/public/img/icon.png">
-    <nav>
+    <a href="http://fiona23.github.io"><img class="icon" src="/blog/public/img/icon.png"></a>
+    <button id="hamburger">
+        <span>fiona23</span>
+    </button>
+    <nav id="nav" class="nav">
     <ul>
          <li><a href="http://fiona23.github.io/">首页</a></li>
          <li><a href="/blog">画儿</a></li>
@@ -31,6 +34,43 @@
 </header>
 
     <div id="blog-list-wrapper">
+    <aside id="banner" class="banner-wrapper">
+
+        <h1 class="vertical-title">枳的博客</h1> 
+        <div id="tags">
+            <ul class="tags-list">
+            
+            <li class="tag-li">
+            <a href="/blog/tag/index.html#jekyll">jekyll</a>
+            </li>
+            
+            <li class="tag-li">
+            <a href="/blog/tag/index.html#ife">ife</a>
+            </li>
+            
+            <li class="tag-li">
+            <a href="/blog/tag/index.html#杂记">杂记</a>
+            </li>
+            
+            <li class="tag-li">
+            <a href="/blog/tag/index.html#总结">总结</a>
+            </li>
+            
+            <li class="tag-li">
+            <a href="/blog/tag/index.html#javascript">javascript</a>
+            </li>
+            
+            <li class="tag-li">
+            <a href="/blog/tag/index.html#canvas">canvas</a>
+            </li>
+            
+            <li class="tag-li">
+            <a href="/blog/tag/index.html#教程">教程</a>
+            </li>
+            
+            </ul>
+        </div>
+    </aside><!--banner end-->
     <section id="blog-list">
     
         <ul>
@@ -94,50 +134,37 @@
             
 
 
-    </section>
-    <aside id="banner" class="banner-wrapper">
+        </section> <!--blog-list end -->
+</div><!--bloglist-wrapper ends-->
+<div class="exchange">
+    <div class="friends">
+        <h2 class="my-friends">我的朋友们</h3>
+        <ul class="friends-list">
+            <li><a href="http://zdx.link/">zdx</a></li>
+        </ul>
+        <p>如果你想和我交换友链可以在下面留言或者给我发<a class="inline-link" href="mailto:fiona_fanmy@163.com" title="fiona_fanmy@163.com">邮件</a>
+    </div>
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="" data-title="枳的博客" data-url=""></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"milamiya"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
 
-        <div class="blog-banner">
-             <h1>枳的博客</h1> 
-        </div>
-        <div id="tags">
-            <ul class="tags-list">
-            
-            <li class="tag-li">
-            <a href="/blog/tag/index.html#jekyll">jekyll</a>
-            </li>
-            
-            <li class="tag-li">
-            <a href="/blog/tag/index.html#ife">ife</a>
-            </li>
-            
-            <li class="tag-li">
-            <a href="/blog/tag/index.html#杂记">杂记</a>
-            </li>
-            
-            <li class="tag-li">
-            <a href="/blog/tag/index.html#总结">总结</a>
-            </li>
-            
-            <li class="tag-li">
-            <a href="/blog/tag/index.html#javascript">javascript</a>
-            </li>
-            
-            <li class="tag-li">
-            <a href="/blog/tag/index.html#canvas">canvas</a>
-            </li>
-            
-            <li class="tag-li">
-            <a href="/blog/tag/index.html#教程">教程</a>
-            </li>
-            
-            </ul>
-        </div>
-    </aside>
 </div>
    
 
-<div id="footer" class="container">
+<div id="footer">
     <p>  Copyright © 2015 - <a href="/">fiona23</a> - Powered by 
         <a href="http://jekyllrb.com/">Jekyll</a>.
         <a href="http://github.com/">Github</a>
