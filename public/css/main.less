@@ -47,6 +47,12 @@ header {
     }
     position: fixed;
     top:0;
+    z-index:1;
+    .transition (top, 0.6s)
+}
+
+header.down {
+    top: -50px;
 }
 
 #hamburger {
@@ -76,6 +82,7 @@ header {
             height: 2px;
             .transition(all, 0.6s);
             .transition-property(top,transform);
+            z-index:2;
         }
         &:after {
             content: '';
@@ -87,6 +94,7 @@ header {
             height: 2px;
             .transition(all, 0.6s);
             .transition-property(bottom,transform);
+            z-index: 2;
         }
     }
     span.x {
@@ -154,6 +162,12 @@ nav ul>li {
 	background-color: #f0f0f0;
 }
 
+.post-mainbody {
+    width: 980px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
 .post-content {
     img {
         margin: 1em 0 2em 0;
@@ -208,6 +222,7 @@ nav ul>li {
     text-align:right;
     a {
         position:relative;
+        z-index: 0;
         &:before {
             content: "";
             width: 100%;
@@ -280,6 +295,23 @@ nav ul>li {
     padding: 0;
     li {
         
+    }
+}
+
+@media  screen and (max-width: 1000px) {
+    .post-mainbody {
+        box-sizing: border-box;
+        padding: 50px;
+        width: 100%;
+    }
+    .vertical-title {
+        margin-left: 250px;
+    }
+    .tags-list {
+        width: 251px;
+    }
+    #blog-list {
+        padding-left: 20px;
     }
 }
 
@@ -360,6 +392,10 @@ nav ul>li {
     }
     .exchange {
         padding: 20px;
+    }
+
+    .post-mainbody {
+        padding: 50px 20px;
     }
     
 }
