@@ -65,6 +65,44 @@
 
 <p>导致我连续竖排的图片总有一定缝隙。后来谷歌到是因为 <code>img</code> 是行内元素，会有一个与文字的baseline对应的下边沿的距离。<br/>
 设置 <code>img{ vertical-align:top; }</code> 就可以解决了。</p>
+
+<h3>2015/9/14</h3>
+
+<h3>keyword: upload file pure css</h3>
+
+<p>之前在写<code>&lt;input type="file" /&gt;</code>的样式的时候，用的是图片，但是觉得不是很好看，所以今天改成用纯CSS实现了，方法如下：</p>
+
+<h3>html code</h3>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;file-input&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span&gt;</span>upload<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;file&quot;</span> <span class="na">class=</span><span class="s">&quot;upload-btn&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+
+<h3>css code</h3>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.file-input</span> <span class="p">{</span>
+    <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+    <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
+    <span class="k">margin</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="k">cursor</span><span class="o">:</span> <span class="k">pointer</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">,</span><span class="nt">upload-btn</span> <span class="p">{</span>
+    <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
+    <span class="k">top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">right</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span> <span class="c">/*防止遮住大div*/</span>
+    <span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
+    <span class="k">cursor</span><span class="o">:</span> <span class="k">pointer</span><span class="p">;</span>
+    <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="n">filter</span><span class="o">:</span> <span class="n">alpha</span><span class="p">(</span><span class="k">opacity</span><span class="o">=</span><span class="m">0</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+
+
     
   </div>
 
