@@ -102,6 +102,25 @@
 <span class="p">}</span></code></pre></div>
 
 
+<h3>2015/10/6</h3>
+
+<h3>keyword: requreJS AMD define require</h3>
+
+<p>以前用<code>requireJS</code>的时候都是用的<code>require(['a', 'b'], funciont(a,b){})</code>的方式使用，但是当依赖的列表过长的时候就会比较麻烦，所以随用随取可能会是更好的方式。记录一下几种用法<br/>
+最常见的第一种就是上面提到的，随用随取的方式是：</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">define</span><span class="p">(</span><span class="nx">funciont</span><span class="p">(</span><span class="nx">require</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="p">})</span></code></pre></div>
+
+
+<p>还有一种是</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">define</span><span class="p">([</span><span class="s1">&#39;require&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">],</span> <span class="nx">funciont</span><span class="p">(</span><span class="nx">require</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="p">})</span></code></pre></div>
+
+
 
     
   </div>

@@ -52,3 +52,22 @@ tag: [总结]
     filter: alpha(opacity=0);
 }
 {% endhighlight %}
+
+###2015/10/6
+###keyword: requreJS AMD define require
+以前用`requireJS`的时候都是用的`require(['a', 'b'], funciont(a,b){})`的方式使用，但是当依赖的列表过长的时候就会比较麻烦，所以随用随取可能会是更好的方式。记录一下几种用法  
+最常见的第一种就是上面提到的，随用随取的方式是：
+{% highlight js %}
+define(funciont(require){
+    var a = require('a')
+})
+{% endhighlight %}
+
+还有一种是
+
+{% highlight js %}
+define(['require', 'a'], funciont(require){
+    var a = require('a')
+})
+{% endhighlight %}
+
