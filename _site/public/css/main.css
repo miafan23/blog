@@ -271,6 +271,9 @@ nav ul > li {
 .friends-list {
   padding: 0;
 }
+.friends-list li {
+    display: inline-block;
+}
 @media screen and (max-width: 1000px) {
   .post-mainbody {
     box-sizing: border-box;
