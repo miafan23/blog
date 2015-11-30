@@ -238,15 +238,7 @@ nav ul > li {
   padding: 0;
   margin: 0;
 }
-#blog-list ul li::before {
-  content: "\f111";
-  font-family: FontAwesome;
-  font-size: 8px;
-  color: #cdcdcd;
-  position: absolute;
-  left: -5px;
-  top: 55px;
-}
+
 .banner-wrapper {
   float: right;
   width: 50%;
