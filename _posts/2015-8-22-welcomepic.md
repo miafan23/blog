@@ -8,7 +8,7 @@ tag: [javascript, canvas, 教程]
 你是从首页无意中点进来的么？喜欢首页的那个旋转的动画的话，跟着这篇博客就能很快做出来哟！
 
 
-##step1
+## step1
 最终的形状其实是下面这个图形不停旋转得到的， 所以第一步就是画出下面这个图形
 
 ![枳 图一]( {{ site.baseurl }}/public/img/post/20150822_1.png )
@@ -38,8 +38,8 @@ var pie = {
 
 写完上面的代码以后，再 `pie.draw()` 你应该会得到上面给出的那个图形  
 
-##step2
-第二步就是要让图形旋转起来了，我们可以指定一个旋转速度，每一帧动画的旋转角度
+## step2
+第二步就是要让图形旋转起来了，我们可以指定一个旋转速度，每一帧动画的旋转角度  
 
 {% highlight js %}
 var pie = {
@@ -75,7 +75,7 @@ var pie = {
 
 有关globalCompositionOperation相关可以[点击](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing)了解，通过这样，我们可以得到一个旋转的初步图形，但是你应该已经发现，因为我们是一直叠加在以前的图形上，所以会越来越浓，最后变成一块黑饼，当然这不是我们想要的结果，所以接下来第三步就是解决这个问题。
 ![枳 图二]( {{ site.baseurl }}/public/img/post/20150822_2.png )
-#step3
+## step3
 想要最终不是一个黑饼，那么每新画一个，就得让前面画过的图形慢慢消失，所以我们每新画一个旋转的小扇形之前，可以将我们的画布填充满白色，这样以前画的就不会和新画的重叠了  
 {% highlight js %}
 loop: function () {

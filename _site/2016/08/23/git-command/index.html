@@ -12,7 +12,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>使用 react router 的时候使用 flux 的问题</title>
+    <title>git 常用命令</title>
     <link rel="shortcut icon" type="image/x-icon" href="/blog/public/img/icon.ico" />
     <link rel="stylesheet" href="/blog/public/css/default.css" type="text/css">
     <link rel="stylesheet" href="/blog/public/css/main.css" type="text/css">
@@ -39,36 +39,48 @@
   <div class="post-head">
     <h1 class="post-title">
       <a class="post-title-blog" href="">
-        使用 react router 的时候使用 flux 的问题
+        git 常用命令
       </a>
     </h1>
     <span class="info">发表于<time>&nbsp2016-08-23</time></span>
-      <span class="info"><a href="/blog/tag/index.html#react"><i class="fa fa-tags"></i>react</a></span> 
+      <span class="info"><a href="/blog/tag/index.html#"><i class="fa fa-tags"></i></a></span> 
       <span class="info">&nbsp<a href="/blog/tag/index.html#"></a></span>
       <span class="info">&nbsp<a href="/tag/index.html#"></a></span>
   </div><!--post head-->
   <div class="post-content">
-    <p>最近做的项目使用的是 react + react-router + flux 的开发模式，在 flux 中需要监听 Store 的变化，一般是在 control view 的 <code class="highlighter-rouge">componentDidMount</code> 中去监听，当 Store 变化后，去执行对应的函数，例如 setState()。</p>
+    <p>总结一下 git 的常用又常忘的命令。</p>
 
-<p>前两天遇到的一个错是，当我从 index 跳到 about 页面，又从 about 页面跳回 index 页面后，当 store 变化时，控制台报错说我在一个 <code class="highlighter-rouge">umount</code> 的组件中执行了 <code class="highlighter-rouge">setState</code>，当时有点奇怪我明明所有的 <code class="highlighter-rouge">setState</code> 都是在 <code class="highlighter-rouge">componentDidMount</code> 里执行的啊。后来想到可能是当我从 index 页面跳到 about 页面以后，index 这个组件已经<code class="highlighter-rouge">unmount</code>了，但是却一直还在监听 <code class="highlighter-rouge">Store</code> ，当 <code class="highlighter-rouge">Store</code> 变化的时候，又去执行了 <code class="highlighter-rouge">setState</code> ，导致出现报错。<br />
-后来在<code class="highlighter-rouge">componentWillUnmount</code>里执行里<code class="highlighter-rouge">removeListener</code>以后，报错就消失了。需要注意的是<code class="highlighter-rouge">removeListener</code>这个函数需要把最开始的<code class="highlighter-rouge">addListener</code>的<code class="highlighter-rouge">callback</code>作为参数传进去。这篇文章介绍得很清楚：http://www.alloyteam.com/2015/08/eventemitter/</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>git rebase -i HEAD~{num}
+</code></pre>
+</div>
+<p>num 对应数字，这条命令是用来编辑 commit 信息的，有时候需要合并 commit 或是修改 commit 内容。提交之后会有提示在每条 commit 信息前加上对应的字母分别代表什么操作。</p>
 
+<div class="highlighter-rouge"><pre class="highlight"><code>git reset --hard HEAD~num
+</code></pre>
+</div>
+<p>放弃本地修改，回到前 num 个版本。谨慎使用！</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git pull --rebase origin {branch}
+</code></pre>
+</div>
+<p>拉取远程分支并合并，加上rebase是防止在 commit log 里出现 merge。加上 rebase 这样会自然合并.
+feifewhe</p>
     
   </div>
 
   <div id="divider">
     
-      <a class="" id="lastest"><i class="fa fa-circle"></i></a>
+      <a class="" href="/blog//2016/08/23/react-flux-event/" title="上一篇"><i class="fa fa-chevron-left"></i></a>
     
     
-      <a class="" href="/blog//2016/08/23/git-command/" title="下一篇"><i class="fa fa-chevron-right"></i></a>
+      <a class="" href="/blog//2015/10/06/socket-io-and-phaser-note/" title="下一篇"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 
 
 <!-- 多说评论框 start -->
 <!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="/2016/08/23/react-flux-event" data-title="使用 react router 的时候使用 flux 的问题" data-url=""></div>
+<div class="ds-thread" data-thread-key="/2016/08/23/git-command" data-title="git 常用命令" data-url=""></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
