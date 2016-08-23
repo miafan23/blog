@@ -50,30 +50,25 @@
   <div class="post-content">
     <p>总结一些task02学习到的知识以及踩过的坑。</p>
 
-<h2>积累</h2>
-
-<h3>深度克隆</h3>
-
-<p>当需要克隆的对象是对象和数组的时候，需要进行深度克隆，在改变克隆后的对象时才不会影响原对象。 <br/>
+<p>##积累
+###深度克隆<br />
+当需要克隆的对象是对象和数组的时候，需要进行深度克隆，在改变克隆后的对象时才不会影响原对象。 <br />
 方法是通过递归克隆所有属性和方法，或数组中的元素。</p>
 
-<h3>正则表达式</h3>
+<p>###正则表达式<br />
+^和$的用处：之前一直不太明白这两个的用处，觉得可有可无，不清楚开始和结束标识的意思。现在知道就是在需要检验的字符串中开始结尾不能再比^和$包含的正则表达式多出内容，否则不匹配。<br />
+如果正则表达式中需要用到变量，则必须使用 <code class="highlighter-rouge">new RegExp()</code><br />
+<code class="highlighter-rouge">$1</code> 的用法：在做属性选择器的时候，需要匹配 <code class="highlighter-rouge">[type=XXX]</code>，想法就是用正则来找到<code class="highlighter-rouge">[ ] </code>，然后就涉及到一个问题，要去掉中括号保留中括号里面的字符串，这时候就可以用到<code class="highlighter-rouge">$1</code>， 具体做法是 <code class="highlighter-rouge">selector.replace(/\[([^\[\]]*)\]/, '$1')</code>。</p>
 
-<p>^和$的用处：之前一直不太明白这两个的用处，觉得可有可无，不清楚开始和结束标识的意思。现在知道就是在需要检验的字符串中开始结尾不能再比^和$包含的正则表达式多出内容，否则不匹配。<br/>
-如果正则表达式中需要用到变量，则必须使用 <code>new RegExp()</code><br/>
-<code>$1</code> 的用法：在做属性选择器的时候，需要匹配 <code>[type=XXX]</code>，想法就是用正则来找到<code>[ ]</code>，然后就涉及到一个问题，要去掉中括号保留中括号里面的字符串，这时候就可以用到<code>$1</code>， 具体做法是 <code>selector.replace(/\[([^\[\]]*)\]/, '$1')</code>。</p>
-
-<h3>DOM0事件和DOM2事件</h3>
-
-<p>DOM0事件是handler例如：<code>foo.onclick = fn</code>
-DOM2是事件监听例如：<code>addEventListener('click', fn, false)</code> IE下是 <code>attachEvent('onclick', fn)</code>
-区别在于， DOM2 监听事件可以让多个函数响应一个事件而DOM0 事件处理器不行<br/>
+<p>###DOM0事件和DOM2事件
+DOM0事件是handler例如：<code class="highlighter-rouge">foo.onclick = fn</code>
+DOM2是事件监听例如：<code class="highlighter-rouge">addEventListener('click', fn, false)</code> IE下是 <code class="highlighter-rouge">attachEvent('onclick', fn)</code>
+区别在于， DOM2 监听事件可以让多个函数响应一个事件而DOM0 事件处理器不行<br />
 DOM0清除事件直接赋值null，DOM2清除所有事件则需要复制原DOM</p>
 
-<h3>AJAX</h3>
-
-<p>如果<code>type = get</code> 则 <code>send</code>的数据直接在url上<br/>
-如果<code>type = post</code> 则将需<code>send(data)</code>,data可以是用&amp;连接的字符串，或者键值对象。并且需要 <code>xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")</code></p>
+<p>###AJAX
+如果<code class="highlighter-rouge">type = get</code> 则 <code class="highlighter-rouge">send</code>的数据直接在url上<br />
+如果<code class="highlighter-rouge">type = post</code> 则将需<code class="highlighter-rouge">send(data)</code>,data可以是用&amp;连接的字符串，或者键值对象。并且需要 <code class="highlighter-rouge">xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")</code></p>
     
   </div>
 
@@ -114,7 +109,7 @@ var duoshuoQuery = {short_name:"milamiya"};
    
 
 <div id="footer">
-    <p>  Copyright © 2015 - <a href="/">fiona23</a> - Powered by 
+    <p>  Copyright © 2016 - <a href="/">fiona23</a> - Powered by 
         <a href="http://jekyllrb.com/">Jekyll</a>.
         <a href="http://github.com/">Github</a>
     </p>

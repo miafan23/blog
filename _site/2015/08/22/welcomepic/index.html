@@ -50,22 +50,21 @@
   <div class="post-content">
     <p>你是从首页无意中点进来的么？喜欢首页的那个旋转的动画的话，跟着这篇博客就能很快做出来哟！</p>
 
-<h2>step1</h2>
-
-<p>最终的形状其实是下面这个图形不停旋转得到的， 所以第一步就是画出下面这个图形</p>
+<p>##step1
+最终的形状其实是下面这个图形不停旋转得到的， 所以第一步就是画出下面这个图形</p>
 
 <p><img src="/blog/public/img/post/20150822_1.png" alt="枳 图一" /></p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;canvas&#39;</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">&#39;2d&#39;</span><span class="p">);</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'canvas'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">'2d'</span><span class="p">);</span>
 <span class="c1">//注意不要使用css给canvas设定宽高</span>
-<span class="nx">canvas</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="s1">&#39;500&#39;</span><span class="p">);</span>
-<span class="nx">canvas</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;500&#39;</span><span class="p">);</span>
+<span class="nx">canvas</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'width'</span><span class="p">,</span> <span class="s1">'500'</span><span class="p">);</span>
+<span class="nx">canvas</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'height'</span><span class="p">,</span> <span class="s1">'500'</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">pie</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">count</span><span class="o">:</span> <span class="mi">85</span><span class="p">,</span>
+    <span class="na">count</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span>
 
-    <span class="nx">draw</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="na">draw</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
         <span class="c1">//将圆心移动到canvas中心</span>
         <span class="nx">ctx</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span> <span class="mi">125</span><span class="p">)</span>
         <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="p">;</span>
@@ -76,25 +75,23 @@
             <span class="nx">ctx</span><span class="p">.</span><span class="nx">stroke</span><span class="p">();</span>
         <span class="p">}</span>
     <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
+<p>写完上面的代码以后，再 <code class="highlighter-rouge">pie.draw()</code> 你应该会得到上面给出的那个图形</p>
 
-<p>写完上面的代码以后，再 <code>pie.draw()</code> 你应该会得到上面给出的那个图形</p>
+<p>##step2
+第二步就是要让图形旋转起来了，我们可以指定一个旋转速度，每一帧动画的旋转角度</p>
 
-<h2>step2</h2>
-
-<p>第二步就是要让图形旋转起来了，我们可以指定一个旋转速度，每一帧动画的旋转角度</p>
-
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">pie</span> <span class="o">=</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">pie</span> <span class="o">=</span> <span class="p">{</span>
    <span class="c1">//上面写过的代码不再重复</span>
     <span class="p">...</span>
-    <span class="nx">rotation</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="na">rotation</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="c1">//可以自己尝试弄一个比较舒服的速度</span>
-    <span class="nx">speed</span><span class="o">:</span> <span class="mf">0.06</span><span class="err">，</span>
+    <span class="na">speed</span><span class="p">:</span> <span class="mf">0.06</span><span class="err">，</span>
 
-    <span class="nx">draw</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="na">draw</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
         <span class="c1">//每次旋转后将新画的图像画在原来的图像之上</span>
-        <span class="nx">ctx</span><span class="p">.</span><span class="nx">globalCompositeOperation</span> <span class="o">=</span> <span class="s1">&#39;source-over&#39;</span><span class="p">;</span>
+        <span class="nx">ctx</span><span class="p">.</span><span class="nx">globalCompositeOperation</span> <span class="o">=</span> <span class="s1">'source-over'</span><span class="p">;</span>
         <span class="c1">//保存一下状态</span>
         <span class="nx">ctx</span><span class="p">.</span><span class="nx">save</span><span class="p">();</span>
 
@@ -104,7 +101,7 @@
         <span class="p">...</span>
         <span class="nx">ctx</span><span class="p">.</span><span class="nx">restore</span><span class="p">();</span>
     <span class="p">}</span>
-    <span class="nx">loop</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nl">loop</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
         <span class="c1">//requestAnimationFrame执行的时候，this会变为windows，所以先保存一下。</span>
         <span class="kd">var</span> <span class="nx">_this</span> <span class="o">=</span> <span class="nx">pie</span><span class="p">;</span>
         <span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">_this</span><span class="p">.</span><span class="nx">loop</span><span class="p">);</span>
@@ -113,24 +110,21 @@
 
         <span class="nx">_this</span><span class="p">.</span><span class="nx">draw</span><span class="p">();</span>
     <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
-
+<span class="p">}</span></code></pre></figure>
 
 <p>有关globalCompositionOperation相关可以<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing">点击</a>了解，通过这样，我们可以得到一个旋转的初步图形，但是你应该已经发现，因为我们是一直叠加在以前的图形上，所以会越来越浓，最后变成一块黑饼，当然这不是我们想要的结果，所以接下来第三步就是解决这个问题。
-<img src="/blog/public/img/post/20150822_2.png" alt="枳 图二" /></p>
+<img src="/blog/public/img/post/20150822_2.png" alt="枳 图二" />
+#step3
+想要最终不是一个黑饼，那么每新画一个，就得让前面画过的图形慢慢消失，所以我们每新画一个旋转的小扇形之前，可以将我们的画布填充满白色，这样以前画的就不会和新画的重叠了</p>
 
-<h1>step3</h1>
-
-<p>想要最终不是一个黑饼，那么每新画一个，就得让前面画过的图形慢慢消失，所以我们每新画一个旋转的小扇形之前，可以将我们的画布填充满白色，这样以前画的就不会和新画的重叠了</p>
-
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">loop</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">loop</span><span class="err">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
         <span class="kd">var</span>  <span class="nx">_this</span> <span class="o">=</span> <span class="nx">pie</span><span class="p">;</span>
 
         <span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">_this</span><span class="p">.</span><span class="nx">loop</span><span class="p">);</span>
 
-        <span class="nx">ctx</span><span class="p">.</span><span class="nx">globalCompositeOperation</span> <span class="o">=</span> <span class="s1">&#39;destination-out&#39;</span><span class="p">;</span>
+        <span class="nx">ctx</span><span class="p">.</span><span class="nx">globalCompositeOperation</span> <span class="o">=</span> <span class="s1">'destination-out'</span><span class="p">;</span>
         <span class="c1">//填充的白色给一个透明度，这样才有小尾巴哟</span>
-        <span class="nx">ctx</span><span class="p">.</span><span class="nx">fillStyle</span> <span class="o">=</span> <span class="s1">&#39;rgba(0, 0, 0, 0.07)&#39;</span><span class="p">;</span>
+        <span class="nx">ctx</span><span class="p">.</span><span class="nx">fillStyle</span> <span class="o">=</span> <span class="s1">'rgba(0, 0, 0, 0.07)'</span><span class="p">;</span>
         <span class="nx">ctx</span><span class="p">.</span><span class="nx">fillRect</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">250</span> <span class="p">);</span>
 
         <span class="nx">_this</span><span class="p">.</span><span class="nx">rotation</span> <span class="o">+=</span> <span class="nx">_this</span><span class="p">.</span><span class="nx">speed</span>
@@ -138,10 +132,9 @@
         <span class="nx">_this</span><span class="p">.</span><span class="nx">draw</span><span class="p">();</span>
 
 
-    <span class="p">}</span></code></pre></div>
+    <span class="p">}</span></code></pre></figure>
 
-
-<p>然后 <code>pie.loop()</code> 一下，好了，这样应该就能得到我首页的那个开场动画了！speed,透明度都可以自己调到一个自己比较喜欢的值～这种有点禅意的且性冷淡的风格真是深得我心！</p>
+<p>然后 <code class="highlighter-rouge">pie.loop()</code> 一下，好了，这样应该就能得到我首页的那个开场动画了！speed,透明度都可以自己调到一个自己比较喜欢的值～这种有点禅意的且性冷淡的风格真是深得我心！</p>
 
 <p><img src="/blog/public/img/post/20150822_3.jpg" alt="枳 图三" /></p>
     
@@ -184,7 +177,7 @@ var duoshuoQuery = {short_name:"milamiya"};
    
 
 <div id="footer">
-    <p>  Copyright © 2015 - <a href="/">fiona23</a> - Powered by 
+    <p>  Copyright © 2016 - <a href="/">fiona23</a> - Powered by 
         <a href="http://jekyllrb.com/">Jekyll</a>.
         <a href="http://github.com/">Github</a>
     </p>

@@ -1,11 +1,14 @@
 # Dependencies
-markdown:         rdiscount
-highlighter:      pygments
+markdown:         kramdown
+highlighter:      rouge
 
 #
 encoding:         "utf-8"
 # Permalinks
 permalink:        pretty
+
+# Gems
+gems: [jekyll-paginate]
 
 # Setup
 title:            fiona

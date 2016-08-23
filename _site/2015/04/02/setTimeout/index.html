@@ -48,20 +48,17 @@
       <span class="info">&nbsp<a href="/tag/index.html#"></a></span>
   </div><!--post head-->
   <div class="post-content">
-    <p>今天在一个博客上看到了博客一条一条显示的效果觉得很优雅，所以也尝试做一个这样的效果。想法是使用<code>setTimeout</code>来控制条目的<code>opacity</code>，形成淡入的效果，在第一条淡入完成以后，再让第二条淡入。这样的话我的fade函数需要传入一个参数来控制是第几条条目。但是标准的<code>setTimeout(fade，1000)</code>，<code>fade</code>只是函数名，不带(),因此不能传入参数。</p>
+    <p>今天在一个博客上看到了博客一条一条显示的效果觉得很优雅，所以也尝试做一个这样的效果。想法是使用<code class="highlighter-rouge">setTimeout</code>来控制条目的<code class="highlighter-rouge">opacity</code>，形成淡入的效果，在第一条淡入完成以后，再让第二条淡入。这样的话我的fade函数需要传入一个参数来控制是第几条条目。但是标准的<code class="highlighter-rouge">setTimeout(fade，1000)</code>，<code class="highlighter-rouge">fade</code>只是函数名，不带(),因此不能传入参数。</p>
 
 <p>后来经过谷歌，得到解决方案可以使用匿名函数，代码如下</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
     <span class="nx">myFunc</span><span class="p">(</span><span class="nx">param</span><span class="p">);</span>
-<span class="p">},</span> <span class="mi">1</span><span class="p">)</span></code></pre></div>
-
+<span class="p">},</span> <span class="mi">1</span><span class="p">)</span></code></pre></figure>
 
 <p>另外，在IE10及以上的浏览器中，setTimeout其实支持传入参数,用法如下</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">myFunc</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">param</span><span class="p">);</span></code></pre></div>
-
-
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">myFunc</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">param</span><span class="p">);</span></code></pre></figure>
 
     
   </div>
@@ -103,7 +100,7 @@ var duoshuoQuery = {short_name:"milamiya"};
    
 
 <div id="footer">
-    <p>  Copyright © 2015 - <a href="/">fiona23</a> - Powered by 
+    <p>  Copyright © 2016 - <a href="/">fiona23</a> - Powered by 
         <a href="http://jekyllrb.com/">Jekyll</a>.
         <a href="http://github.com/">Github</a>
     </p>
